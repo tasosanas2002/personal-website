@@ -1,0 +1,56 @@
+.technologies-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* horizontal scroll row */
+.tech-row {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+/* tech card now horizontal */
+.tech-card {
+  flex: 0 0 auto;        /* keep width fixed */
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 0.5rem 0.75rem;   /* slightly more horizontal padding */
+  display: flex;
+  flex-direction: row;       /* row instead of column */
+  align-items: center;       /* vertically center image + text */
+  gap: 0.5rem;               /* space between image and text */
+  transition: transform 0.2s, box-shadow 0.2s;
+  min-width: 120px;          /* ensures enough space for image + text */
+}
+
+/* hover effect */
+.tech-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* image */
+.tech-card img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+/* text on the right */
+.tech-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap; /* prevents wrapping */
+}

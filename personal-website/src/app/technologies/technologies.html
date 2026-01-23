@@ -1,0 +1,40 @@
+<section class="technologies-section">
+  <!-- Frontend Techs -->
+  <h2 class="section-title">FrontEnd Technologies I Work With</h2>
+  <div class="tech-row">
+    <div
+      class="tech-card"
+      *ngFor="let tech of technologies"
+      [ngStyle]="{ 'border': '2px solid ' + tech.borderColor }"
+    >
+      <img [src]="tech.picture" [alt]="tech.name" />
+      <p class="tech-name">{{ tech.name }}</p>
+    </div>
+  </div>
+
+  <!-- Developer Tools -->
+  <h2 class="section-title">Developer Tools I Use</h2>
+  <div class="tech-row">
+    <div
+      class="tech-card"
+      *ngFor="let devtool of developerTools"
+      [ngStyle]="{ 'border': '2px solid ' + devtool.borderColor }"
+    >
+      <img [src]="devtool.picture" [alt]="devtool.name" />
+      <p class="tech-name">{{ devtool.name }}</p>
+    </div>
+  </div>
+
+
+  <h2 class="section-title">Languages I Speak</h2>
+  <div class="tech-row">
+    <div
+      class="tech-card"
+      *ngFor="let language of languages"
+      [ngStyle]="{ 'border': '2px solid ' + language.borderColor }"
+    >
+      <img [src]="language.picture" [alt]="language.name" />
+      <p class="tech-name">{{ language.name }}</p>
+    </div>
+  </div>
+</section>
