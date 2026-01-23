@@ -1,0 +1,19 @@
+<nav class="navbar">
+  <a href="#" class="logo">MyPortfolio</a>
+
+  <!-- Hamburger -->
+  <div class="menu-toggle" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Menu Links -->
+  <ul [class.active]="menuOpen">
+    <li><a href="#about" (click)="closeMenu()">About</a></li>
+    <li><a href="#projects" (click)="closeMenu()">Projects</a></li>
+    <li><a href="#skills" (click)="closeMenu()">Skills</a></li>
+    <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+    <li><a href="#resume" class="btn" (click)="closeMenu()">Resume</a></li>
+  </ul>
+</nav>
