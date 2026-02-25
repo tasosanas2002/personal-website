@@ -1,56 +1,68 @@
 .technologies-section {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 0 1rem;
-  text-align: center;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 1.15rem;
+  padding: clamp(1rem, 3vw, 2rem);
+  box-shadow: var(--shadow-lg);
+}
+
+.section-head {
+  margin-bottom: 1.2rem;
 }
 
 .section-title {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-  color: #ffffff;
+  margin: 0.4rem 0 0;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
 }
 
-/* horizontal scroll row */
-.tech-row {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  padding-bottom: 1rem;
+.section-copy {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+  max-width: 62ch;
 }
 
-/* tech card now horizontal */
+.tech-group + .tech-group {
+  margin-top: 1.2rem;
+}
+
+.tech-group h3 {
+  margin: 0;
+  color: #dff5ff;
+  font-size: 1rem;
+}
+
+.tech-grid {
+  margin-top: 0.7rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.75rem;
+}
+
 .tech-card {
-  flex: 0 0 auto;        /* keep width fixed */
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  padding: 0.5rem 0.75rem;   /* slightly more horizontal padding */
+  min-height: 58px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 0.85rem;
   display: flex;
-  flex-direction: row;       /* row instead of column */
-  align-items: center;       /* vertically center image + text */
-  gap: 0.5rem;               /* space between image and text */
-  transition: transform 0.2s, box-shadow 0.2s;
-  min-width: 120px;          /* ensures enough space for image + text */
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.65rem 0.75rem;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-/* hover effect */
 .tech-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: rgba(56, 189, 248, 0.08);
 }
 
-/* image */
 .tech-card img {
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
 }
 
-/* text on the right */
 .tech-name {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #ffffff;
-  white-space: nowrap; /* prevents wrapping */
+  margin: 0;
+  color: #e9f1ff;
+  font-size: 0.92rem;
+  font-weight: 700;
 }

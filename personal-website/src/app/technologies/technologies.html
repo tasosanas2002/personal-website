@@ -1,40 +1,65 @@
 <section class="technologies-section">
-  <!-- Frontend Techs -->
-  <h2 class="section-title">FrontEnd Technologies I Work With</h2>
-  <div class="tech-row">
-    <div
-      class="tech-card"
-      *ngFor="let tech of technologies"
-      [ngStyle]="{ 'border': '2px solid ' + tech.borderColor }"
-    >
-      <img [src]="tech.picture" [alt]="tech.name" />
-      <p class="tech-name">{{ tech.name }}</p>
-    </div>
+  <div class="section-head">
+    <p class="eyebrow">Toolkit</p>
+    <h2 class="section-title">Technologies and Tools</h2>
+    <p class="section-copy">
+      The stack I use to build production-ready interfaces with solid developer experience.
+    </p>
   </div>
 
-  <!-- Developer Tools -->
-  <h2 class="section-title">Developer Tools I Use</h2>
-  <div class="tech-row">
-    <div
-      class="tech-card"
-      *ngFor="let devtool of developerTools"
-      [ngStyle]="{ 'border': '2px solid ' + devtool.borderColor }"
-    >
-      <img [src]="devtool.picture" [alt]="devtool.name" />
-      <p class="tech-name">{{ devtool.name }}</p>
+  <article class="tech-group">
+    <h3>Frontend Technologies</h3>
+    <div class="tech-grid">
+      <div
+        class="tech-card"
+        *ngFor="let tech of technologies"
+        [ngStyle]="{ 'border': '1px solid ' + tech.borderColor }"
+      >
+        <img [src]="tech.picture" [alt]="tech.name" />
+        <p class="tech-name">{{ tech.name }}</p>
+      </div>
     </div>
-  </div>
+  </article>
 
-
-  <h2 class="section-title">Languages I Speak</h2>
-  <div class="tech-row">
-    <div
-      class="tech-card"
-      *ngFor="let language of languages"
-      [ngStyle]="{ 'border': '2px solid ' + language.borderColor }"
-    >
-      <img [src]="language.picture" [alt]="language.name" />
-      <p class="tech-name">{{ language.name }}</p>
+  <article class="tech-group">
+    <h3>Developer Tools</h3>
+    <div class="tech-grid">
+      <div
+        class="tech-card"
+        *ngFor="let devtool of developerTools"
+        [ngStyle]="{ 'border': '1px solid ' + devtool.borderColor }"
+      >
+        <img [src]="devtool.picture" [alt]="devtool.name" />
+        <p class="tech-name">{{ devtool.name }}</p>
+      </div>
     </div>
-  </div>
+  </article>
+
+  <article class="tech-group">
+    <h3>AI Tools</h3>
+    <div class="tech-grid">
+      <div
+        class="tech-card"
+        *ngFor="let aiTool of aiTools"
+        [ngStyle]="{ 'border': '1px solid ' + aiTool.borderColor }"
+      >
+        <img [src]="aiTool.picture" [alt]="aiTool.name" />
+        <p class="tech-name">{{ aiTool.name }}</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="tech-group">
+    <h3>Languages</h3>
+    <div class="tech-grid">
+      <div
+        class="tech-card"
+        *ngFor="let language of languages"
+        [ngStyle]="{ 'border': '1px solid ' + language.borderColor }"
+      >
+        <img [src]="language.picture" [alt]="language.name" />
+        <p class="tech-name">{{ language.name }}</p>
+      </div>
+    </div>
+  </article>
 </section>

@@ -1,19 +1,69 @@
-
-<nav>
 <app-navbar></app-navbar>
-</nav>
-<main class="main">
-  
-  <section style="max-width:900px;margin:2rem auto;padding:1rem;">
-    <h1>Welcome to MyPortfolio</h1>
-    <p>Replace this with your homepage sections or router outlet.</p>
+
+<main class="main-shell" id="top">
+  <section id="about" class="hero-section">
+    <p class="eyebrow">Frontend Developer</p>
+    <h1>Building clean, fast, and modern web experiences.</h1>
+    <p class="hero-copy">
+      I design and build responsive applications with Angular, TypeScript, and modern tooling.
+      My focus is simple: clear UI, reliable code, and smooth user flows.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#projects">View Projects</a>
+      <a class="btn btn-ghost" href="#contact">Contact Me</a>
+    </div>
+
+    <div class="hero-stats" aria-label="Quick highlights">
+      <article class="stat-card">
+        <h3>6+</h3>
+        <p>Core frontend technologies used</p>
+      </article>
+      <article class="stat-card">
+        <h3>4</h3>
+        <p>Developer tools in daily workflow</p>
+      </article>
+      <article class="stat-card">
+        <h3>2</h3>
+        <p>Languages for international teams</p>
+      </article>
+    </div>
   </section>
 
-  <section style="max-width:900px;margin:2rem auto;padding:1rem;">
-    
-    
-  </section>  
-  <app-technologies></app-technologies>
+  <section id="skills" class="panel-section">
+    <app-technologies></app-technologies>
+  </section>
+
+  <section id="projects" class="panel-section">
+    <div class="section-heading">
+      <p class="eyebrow">Portfolio</p>
+      <h2>Selected Projects</h2>
+    </div>
+
+    <div class="projects-grid">
+      <article class="project-card">
+        <h3>Personal Website</h3>
+        <p>Responsive Angular portfolio focused on performance and clean component structure.</p>
+      </article>
+      <article class="project-card">
+        <h3>UI Component Playground</h3>
+        <p>Reusable frontend components with consistent design tokens and accessible patterns.</p>
+      </article>
+      <article class="project-card">
+        <h3>DevOps Setup Demo</h3>
+        <p>Containerized app setup with Docker and modern Node.js development workflow.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" class="panel-section contact-section">
+    <div class="contact-card">
+      <p class="eyebrow">Open to Collaborate</p>
+      <h2>Let’s build something useful.</h2>
+      <p>Available for frontend projects, UI implementation, and long-term product work.</p>
+      <a class="btn btn-primary" href="mailto:your-email@example.com">Send an Email</a>
+    </div>
+  </section>
 
   <router-outlet></router-outlet>
 </main>

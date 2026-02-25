@@ -18,6 +18,13 @@ export class Technologies {
   { name: 'React', picture: 'assets/images/reactlogo.png', borderColor: '#61dafb' },
 ];
 
+  aiTools = [
+  { name: 'ChatGPT', picture: 'assets/images/chatgpt.png', borderColor: '#10b981' },
+  { name: 'GitHub Copilot', picture: 'assets/images/copilotgithub.png', borderColor: '#000000' },
+  { name: 'Lovable AI User Interface ', picture: 'assets/images/lovableai.png', borderColor: '#ff69b4' },
+];
+
+
 
   developerTools = [
   { name: 'GitHub Desktop', picture: 'assets/images/GithubDlogo.png', borderColor: '#9106cd' },
