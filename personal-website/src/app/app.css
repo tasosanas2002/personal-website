@@ -148,6 +148,110 @@ h1 {
   color: var(--muted);
 }
 
+.experience-section {
+  position: relative;
+  padding: clamp(1rem, 3vw, 2rem);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 1.15rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.experience-intro p {
+  margin-top: 0.7rem;
+  max-width: 68ch;
+  color: var(--muted);
+}
+
+.experience-timeline {
+  margin-top: 1.1rem;
+  position: relative;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0.2rem;
+  bottom: 0.2rem;
+  left: 174px;
+  width: 1px;
+  background: linear-gradient(to bottom, rgba(56, 189, 248, 0.5), rgba(159, 177, 204, 0.25));
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 1rem;
+  padding: 0.45rem 0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 168px;
+  top: 1rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: linear-gradient(120deg, var(--primary-strong), var(--primary));
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
+}
+
+.timeline-meta p,
+.timeline-meta span {
+  margin: 0;
+}
+
+.timeline-meta p {
+  font-weight: 700;
+  color: #d9f3ff;
+}
+
+.timeline-meta span {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.timeline-content {
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.timeline-content p {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+}
+
+.pill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.pill-list li {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.28rem 0.55rem;
+  border-radius: 999px;
+  color: #c8edff;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  background: rgba(56, 189, 248, 0.09);
+}
+
 @media (max-width: 680px) {
   .main-shell {
     padding-top: 5.5rem;
@@ -155,5 +259,20 @@ h1 {
 
   .hero-section {
     padding: 1rem 0.2rem;
+  }
+
+  .experience-timeline::before {
+    left: 6px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+    padding-left: 1rem;
+  }
+
+  .timeline-item::before {
+    left: 0;
+    top: 0.7rem;
   }
 }
