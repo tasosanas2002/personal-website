@@ -52,12 +52,12 @@
               <a [href]="project.url" target="_blank" rel="noopener noreferrer">{{ project.name }}</a>
             </h3>
             <p>{{ project.description }}</p>
-            <p class="project-meta">
+            <!-- <p class="project-meta">
               @if (project.language) {
                 <span>{{ project.language }}</span>
-              }
+              } -->
               <span>Updated {{ project.updatedAt | date: 'MMM yyyy' }}</span>
-            </p>
+            <!-- </p> -->
           </article>
         }
       </div>
