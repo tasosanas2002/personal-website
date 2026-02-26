@@ -40,20 +40,28 @@
       <h2>Selected Projects</h2>
     </div>
 
-    <div class="projects-grid">
-      <article class="project-card">
-        <h3>Personal Website</h3>
-        <p>Responsive Angular portfolio focused on performance and clean component structure.</p>
-      </article>
-      <article class="project-card">
-        <h3>UI Component Playground</h3>
-        <p>Reusable frontend components with consistent design tokens and accessible patterns.</p>
-      </article>
-      <article class="project-card">
-        <h3>DevOps Setup Demo</h3>
-        <p>Containerized app setup with Docker and modern Node.js development workflow.</p>
-      </article>
-    </div>
+    @if (projectsLoading()) {
+      <p class="projects-status">Loading projects from GitHub...</p>
+    } @else if (projectsError()) {
+      <p class="projects-status projects-status-error">{{ projectsError() }}</p>
+    } @else {
+      <div class="projects-grid">
+        @for (project of projects(); track project.url) {
+          <article class="project-card">
+            <h3>
+              <a [href]="project.url" target="_blank" rel="noopener noreferrer">{{ project.name }}</a>
+            </h3>
+            <p>{{ project.description }}</p>
+            <p class="project-meta">
+              @if (project.language) {
+                <span>{{ project.language }}</span>
+              }
+              <span>Updated {{ project.updatedAt | date: 'MMM yyyy' }}</span>
+            </p>
+          </article>
+        }
+      </div>
+    }
   </section>
 
   <section id="experience" class="panel-section experience-section">
