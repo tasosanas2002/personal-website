@@ -59,13 +59,14 @@ h1 {
 .btn-primary {
   background: linear-gradient(120deg, var(--primary-strong), var(--primary));
   color: #03253a;
-  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.28);
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.566);
 }
 
 .btn-ghost {
   border: 1px solid var(--border);
-  color: var(--text);
-  background: rgba(255, 255, 255, 0.02);
+  color: #03253a;
+  background: rgba(224, 221, 221, 0.811);
+  box-shadow: 0 10px 30px rgba(238, 239, 239, 0.566);
 }
 
 .hero-stats {

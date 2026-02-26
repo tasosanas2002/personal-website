@@ -40,7 +40,12 @@
 .navbar ul li a:hover {
   color: #83d9ff;
 }
-
+#resume-link {
+  padding: 0.45rem 0.9rem;
+  background: linear-gradient(120deg, var(--primary-strong), var(--primary));
+  border-radius: 999px;
+  color: #02263b;
+}
 .navbar .btn {
   padding: 0.45rem 0.9rem;
   background: linear-gradient(120deg, var(--primary-strong), var(--primary));
