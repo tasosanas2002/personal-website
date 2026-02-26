@@ -24,7 +24,18 @@ export class Technologies {
   { name: 'Lovable AI User Interface ', picture: 'assets/images/lovableai.png', borderColor: '#ff69b4' },
 ];
 
+designTools = [
+  { name: 'Figma', picture: 'assets/images/figmalogo.png', borderColor: '#f24e1e' },
+  { name: 'Balsamiq', picture: 'assets/images/balsamiqlogo.png', borderColor: '#ff61f6' },
+  
+];
 
+backendTools = [
+  { name: 'PHP', picture: 'assets/images/phplogo.png', borderColor: '#777bb4' },
+  { name: 'MySQL', picture: 'assets/images/mysql.png', borderColor: '#00758f' },
+  { name: 'Firebase', picture: 'assets/images/firebase.png', borderColor: '#ff9900' },
+  { name: 'Netlify', picture: 'assets/images/netlify.png', borderColor: '#127f8f' },
+];
 
   developerTools = [
   { name: 'GitHub Desktop', picture: 'assets/images/GithubDlogo.png', borderColor: '#9106cd' },

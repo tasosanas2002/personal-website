@@ -50,6 +50,20 @@
   </article>
 
   <article class="tech-group">
+    <h3>Backend Tools</h3>
+    <div class="tech-grid">
+      <div
+        class="tech-card"
+        *ngFor="let backendTool of backendTools"
+        [ngStyle]="{ 'border': '1px solid ' + backendTool.borderColor }"
+      >
+        <img [src]="backendTool.picture" [alt]="backendTool.name" />
+        <p class="tech-name">{{ backendTool.name }}</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="tech-group">
     <h3>Languages</h3>
     <div class="tech-grid">
       <div
