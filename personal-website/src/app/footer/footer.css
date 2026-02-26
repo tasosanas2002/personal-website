@@ -28,6 +28,18 @@
   flex-wrap: wrap;
 }
 
+.social {
+  align-items: center;
+}
+
+.social h2 {
+  flex-basis: 100%;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  color: #d9f3ff;
+}
+
 .footer-nav a,
 .social a {
   text-decoration: none;
