@@ -58,6 +58,11 @@ export class App implements OnInit {
   readonly projects = signal<Project[]>([]);
   readonly projectsLoading = signal(true);
   readonly projectsError = signal<string | null>(null);
+  readonly profileView = signal<'experience' | 'education'>('experience');
+
+  setProfileView(view: 'experience' | 'education'): void {
+    this.profileView.set(view);
+  }
 
   async ngOnInit(): Promise<void> {
     await this.loadProjects();

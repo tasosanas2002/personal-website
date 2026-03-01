@@ -65,13 +65,37 @@
 
   <section id="experience" class="panel-section experience-section">
     <div class="section-heading experience-intro">
-      <p class="eyebrow">Experience</p>
-      <h2>Where I Have Worked</h2>
+      <p class="eyebrow">Career</p>
+      <h2>Experience & Education</h2>
       <p>
-        A focused timeline of the roles and projects that shaped my frontend engineering approach.
+        A focused overview of my work history and education journey.
       </p>
     </div>
 
+    <div class="experience-switch" role="tablist" aria-label="Switch between experience and education">
+      <button
+        type="button"
+        class="switch-btn"
+        role="tab"
+        [attr.aria-selected]="profileView() === 'experience'"
+        [class.active]="profileView() === 'experience'"
+        (click)="setProfileView('experience')"
+      >
+        Experience
+      </button>
+      <button
+        type="button"
+        class="switch-btn"
+        role="tab"
+        [attr.aria-selected]="profileView() === 'education'"
+        [class.active]="profileView() === 'education'"
+        (click)="setProfileView('education')"
+      >
+        Education
+      </button>
+    </div>
+
+    @if (profileView() === 'experience') {
     <div class="experience-timeline">
       <article class="timeline-item">
         <div class="timeline-meta">
@@ -130,6 +154,31 @@
         </div>
       </article>
     </div>
+    } @else {
+    <div class="education-grid">
+      <article class="education-card">
+        <p class="education-date">October 2021 - June 2024</p>
+        <h3>City College, University of York Europe Campus</h3>
+        
+        <ul class="pill-list">
+          <li>BSc (Hons) Computer Science, Internet Computing Pathway</li>
+          
+          
+        </ul>
+      </article>
+
+      <article class="education-card">
+        <p class="education-date">September 2018 - June 2021</p>
+        <h3>31st General Senior High School, Thessaloniki</h3>
+        
+        <ul class="pill-list">
+          <li>High School Diploma</li>
+          
+          
+        </ul>
+      </article>
+    </div>
+    }
   </section>
 
   <!-- <section id="contact" class="panel-section contact-section">
