@@ -22,6 +22,9 @@ export class Technologies {
   { name: 'ChatGPT', picture: 'assets/images/chatgpt.png', borderColor: '#10b981' },
   { name: 'GitHub Copilot', picture: 'assets/images/copilotgithub.png', borderColor: '#000000' },
   { name: 'Lovable AI User Interface ', picture: 'assets/images/lovableai.png', borderColor: '#ff69b4' },
+  { name: 'Claude AI', picture: 'assets/images/claude.png', borderColor: '#f24e1e' },
+  { name: 'Notion', picture: 'assets/images/notion.png', borderColor: '#4e4d4e' },
+
 ];
 
 designTools = [
